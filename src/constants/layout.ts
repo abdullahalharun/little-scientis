@@ -12,7 +12,7 @@ export const CENTER_Y = GAME_HEIGHT / 2;
 export const MIN_TOUCH_SIZE = 96;
 
 export const FONT_FAMILY =
-  '"Baloo 2", "Comic Sans MS", "Chalkboard SE", "Marker Felt", sans-serif';
+  '"Baloo Da 2", "Hind Siliguri", "Noto Sans Bengali", "Baloo 2", "Comic Sans MS", sans-serif';
 
 export const FONT_SIZE = {
   title: 64,

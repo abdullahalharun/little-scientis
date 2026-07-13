@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { UiText } from '../constants/uiText';
 import { GameState } from '../game/GameState';
 import { AudioManager } from '../utils/AudioManager';
 import { NarrationManager } from '../utils/NarrationManager';
@@ -17,7 +18,7 @@ export function MuteButton() {
   return (
     <button
       onClick={toggle}
-      aria-label={muted ? 'Turn sound on' : 'Turn sound off'}
+      aria-label={muted ? UiText.soundOn : UiText.soundOff}
       style={{
         position: 'fixed',
         top: 'calc(env(safe-area-inset-top, 0px) + 10px)',

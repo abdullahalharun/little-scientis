@@ -5,6 +5,7 @@ import { CENTER_X, FONT_FAMILY, FONT_SIZE, GAME_HEIGHT, GAME_WIDTH } from '../co
 import { Lines } from '../constants/lines';
 import { SceneKeys } from '../constants/scenes';
 import { TextureKeys } from '../constants/textureKeys';
+import { bnDigits } from '../constants/uiText';
 import { Butterfly } from '../objects/Butterfly';
 import { Cloud } from '../objects/Cloud';
 import { Titu } from '../objects/Titu';
@@ -52,7 +53,7 @@ export class AirScene extends LevelSceneBase {
 
   private buildCounter(): void {
     this.counterText = this.add
-      .text(GAME_WIDTH - 40, 44, `0 / ${BUBBLE_COUNT}`, {
+      .text(GAME_WIDTH - 40, 44, bnDigits(`0 / ${BUBBLE_COUNT}`), {
         fontFamily: FONT_FAMILY,
         fontSize: `${FONT_SIZE.counter}px`,
         color: hex(Colors.textLight),
@@ -157,7 +158,7 @@ export class AirScene extends LevelSceneBase {
     });
 
     this.popped++;
-    this.counterText.setText(`${this.popped} / ${BUBBLE_COUNT}`);
+    this.counterText.setText(bnDigits(`${this.popped} / ${BUBBLE_COUNT}`));
     this.tweens.add({ targets: this.counterText, scale: 1.25, duration: 120, yoyo: true });
     const dot = this.dots[this.popped - 1];
     if (dot) {

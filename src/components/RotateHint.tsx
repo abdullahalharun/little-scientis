@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { UiText } from '../constants/uiText';
 
 /**
  * The game is portrait. On a landscape phone, ask (sweetly) for a rotate.
@@ -40,9 +41,7 @@ export function RotateHint() {
       }}
     >
       <div style={{ fontSize: 64, animation: 'ls-rotate 1.6s ease-in-out infinite' }}>📱</div>
-      <div style={{ fontSize: 26, color: '#4a3b2a', fontWeight: 700 }}>
-        Please turn your device! 🌱
-      </div>
+      <div style={{ fontSize: 26, color: '#4a3b2a', fontWeight: 700 }}>{UiText.rotate}</div>
       <style>
         {`@keyframes ls-rotate {
             0%, 20% { transform: rotate(0deg); }
