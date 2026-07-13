@@ -1,0 +1,25 @@
+{
+  "name": "little-muslim-scientist",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Little Muslim Scientist — educational mini-games for children aged 4-6. Level 1: Titu's Kitchen (photosynthesis).",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "phaser": "^3.90.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.7"
+  }
+}
