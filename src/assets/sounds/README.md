@@ -17,9 +17,11 @@ All audio is currently synthesized with WebAudio (`src/utils/AudioManager.ts`).
 
 ## Voice-over (Titu's narration)
 
-Narration falls back to browser text-to-speech until real recordings exist.
-Record one clip per line in `src/constants/lines.ts` and load it as
-`voice-<lineId>`:
+The speech bubbles show Bengali, but until real recordings exist the
+placeholder text-to-speech reads each line's English `tts` fallback (browsers
+read Bengali poorly). Record one **Bengali** clip per line in
+`src/constants/lines.ts` and load it as `voice-<lineId>` — the clip replaces
+the English TTS automatically:
 
 ```ts
 this.load.audio(voiceKey(Lines.introSalaam.id), 'assets/sounds/voice/intro-salaam.mp3');
@@ -32,4 +34,4 @@ this.load.audio(voiceKey(Lines.introSalaam.id), 'assets/sounds/voice/intro-salaa
 - Gentle Islamic duff / soft Hamd instrumental loop (`music-duff-loop`)
 - SFX: slurp, leaf wiggle, bubble pop, magic sparkle, sun shine, cooking
   sizzle, reward fanfare, button click, success chime, gentle "try again"
-- Voice: a warm, friendly child-appropriate voice for all lines in `lines.ts`
+- Voice: a warm, friendly Bengali voice for all lines in `lines.ts`

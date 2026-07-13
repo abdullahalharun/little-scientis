@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { UiText } from '../constants/uiText';
 import { GameEvents, gameEvents } from '../game/events';
 
 /**
@@ -34,9 +35,7 @@ export function LoadingScreen() {
       }}
     >
       <div style={{ fontSize: 72, animation: 'ls-bounce 0.9s ease-in-out infinite' }}>🌱</div>
-      <div style={{ fontSize: 28, color: '#4a3b2a', fontWeight: 700 }}>
-        Bismillah, let&apos;s grow!
-      </div>
+      <div style={{ fontSize: 28, color: '#4a3b2a', fontWeight: 700 }}>{UiText.loading}</div>
       <style>
         {`@keyframes ls-bounce {
             0%, 100% { transform: translateY(0) scale(1); }

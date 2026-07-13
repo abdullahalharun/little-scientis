@@ -3,6 +3,7 @@ import { SfxKeys } from '../constants/audioKeys';
 import { CENTER_X, GAME_HEIGHT } from '../constants/layout';
 import type { NarrationLine } from '../constants/lines';
 import { type SceneKey } from '../constants/scenes';
+import { UiText } from '../constants/uiText';
 import { BigButton } from '../objects/BigButton';
 import { SpeechBubble } from '../objects/SpeechBubble';
 import { starBurst } from '../objects/StarBurst';
@@ -58,7 +59,7 @@ export abstract class LevelSceneBase extends Phaser.Scene {
 
       const next = nextSceneOf(this.key);
       if (next) {
-        new BigButton(this, CENTER_X, GAME_HEIGHT - 130, 'Next  ➜', () =>
+        new BigButton(this, CENTER_X, GAME_HEIGHT - 130, UiText.next, () =>
           fadeToScene(this, next),
         ).popIn(400);
       }

@@ -5,6 +5,7 @@ import { CENTER_X, FONT_FAMILY, FONT_SIZE, GAME_HEIGHT, GAME_WIDTH } from '../co
 import { LEVELS, type LevelDef } from '../constants/levels';
 import { SceneKeys, type SceneKey } from '../constants/scenes';
 import { TextureKeys } from '../constants/textureKeys';
+import { UiText } from '../constants/uiText';
 import { GameState } from '../game/GameState';
 import { Butterfly } from '../objects/Butterfly';
 import { Cloud } from '../objects/Cloud';
@@ -38,7 +39,7 @@ export class HomeScene extends Phaser.Scene {
 
     // Floating title.
     const title = this.add
-      .text(CENTER_X, 130, '🔬 Little Muslim\nScientist 🌱', {
+      .text(CENTER_X, 130, UiText.gameTitle, {
         fontFamily: FONT_FAMILY,
         fontSize: `${FONT_SIZE.title}px`,
         color: hex(Colors.textLight),

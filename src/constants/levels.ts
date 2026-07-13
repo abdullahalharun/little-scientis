@@ -17,15 +17,15 @@ export interface LevelDef {
 export const LEVELS: LevelDef[] = [
   {
     id: 'photosynthesis',
-    title: "Titu's Kitchen",
+    title: 'টিটুর রান্নাঘর',
     emoji: '🌱',
     sceneKey: SceneKeys.intro,
     available: true,
   },
-  { id: 'water-cycle', title: 'The Water Cycle', emoji: '🌧️', available: false },
-  { id: 'bees', title: 'How Bees Make Honey', emoji: '🐝', available: false },
-  { id: 'ants', title: 'Amazing Ants', emoji: '🐜', available: false },
-  { id: 'moon', title: 'The Moon & Months', emoji: '🌙', available: false },
-  { id: 'seeds', title: 'How Seeds Grow', emoji: '🌰', available: false },
-  { id: 'butterfly', title: 'The Butterfly', emoji: '🦋', available: false },
+  { id: 'water-cycle', title: 'পানির চক্র', emoji: '🌧️', available: false },
+  { id: 'bees', title: 'মৌমাছির মধু', emoji: '🐝', available: false },
+  { id: 'ants', title: 'পিঁপড়ার রাজ্য', emoji: '🐜', available: false },
+  { id: 'moon', title: 'চাঁদ ও মাসগুলো', emoji: '🌙', available: false },
+  { id: 'seeds', title: 'বীজ থেকে চারা', emoji: '🌰', available: false },
+  { id: 'butterfly', title: 'প্রজাপতির গল্প', emoji: '🦋', available: false },
 ];

@@ -3,6 +3,7 @@ import { Colors } from '../constants/colors';
 import { CENTER_X, GAME_HEIGHT, GAME_WIDTH } from '../constants/layout';
 import { Lines } from '../constants/lines';
 import { SceneKeys } from '../constants/scenes';
+import { UiText } from '../constants/uiText';
 import { BigButton } from '../objects/BigButton';
 import { Bird } from '../objects/Bird';
 import { Butterfly } from '../objects/Butterfly';
@@ -57,7 +58,7 @@ export class IntroScene extends LevelSceneBase {
     });
 
     // Start is available right away — no forced waiting for narration.
-    new BigButton(this, CENTER_X, GAME_HEIGHT - 90, '▶  Start', () => {
+    new BigButton(this, CENTER_X, GAME_HEIGHT - 90, UiText.start, () => {
       void AudioManager.startMusic();
       fadeToScene(this, SceneKeys.water);
     }).popIn(1200);

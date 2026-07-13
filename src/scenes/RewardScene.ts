@@ -5,6 +5,7 @@ import { CENTER_X, FONT_FAMILY, FONT_SIZE, GAME_HEIGHT, GAME_WIDTH } from '../co
 import { Lines } from '../constants/lines';
 import { SceneKeys } from '../constants/scenes';
 import { TextureKeys } from '../constants/textureKeys';
+import { UiText } from '../constants/uiText';
 import { GameEvents, gameEvents } from '../game/events';
 import { GameState } from '../game/GameState';
 import { BigButton } from '../objects/BigButton';
@@ -273,7 +274,7 @@ export class RewardScene extends LevelSceneBase {
     gameEvents.emit(GameEvents.levelComplete, 'photosynthesis');
 
     const mashaAllah = this.add
-      .text(CENTER_X, 320, '✨ MashaAllah! ✨', {
+      .text(CENTER_X, 320, UiText.mashaAllah, {
         fontFamily: FONT_FAMILY,
         fontSize: `${FONT_SIZE.title}px`,
         color: hex(Colors.textLight),
@@ -322,7 +323,7 @@ export class RewardScene extends LevelSceneBase {
     panel.add(g);
 
     const title = this.add
-      .text(0, -70, 'Plants need:', {
+      .text(0, -70, UiText.plantsNeed, {
         fontFamily: FONT_FAMILY,
         fontSize: `${FONT_SIZE.small}px`,
         color: hex(Colors.textDark),
@@ -374,7 +375,7 @@ export class RewardScene extends LevelSceneBase {
       this,
       CENTER_X - 155,
       GAME_HEIGHT - 110,
-      '🔄  Again',
+      UiText.again,
       () => fadeToScene(this, SceneKeys.intro),
       { width: 280 },
     ).popIn(500);
@@ -382,7 +383,7 @@ export class RewardScene extends LevelSceneBase {
       this,
       CENTER_X + 155,
       GAME_HEIGHT - 110,
-      '🏠  Home',
+      UiText.home,
       () => fadeToScene(this, SceneKeys.home),
       { color: Colors.buttonOrange, colorDark: Colors.buttonOrangeDark, width: 280 },
     ).popIn(650);
